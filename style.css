@@ -1,0 +1,149 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  background: linear-gradient(to top right, #121090, #3961e6);
+  font-family: Arial;
+  padding: 0 20px 30px 20px;
+}
+
+
+body::-webkit-scrollbar{
+  width: 15px;
+  background: #fff;
+  border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb{
+  background: #55555d;
+  border: 2px solid #fff;
+}
+
+.todos::-webkit-scrollbar{
+  width: 10px;
+  background: #999;
+  border-radius: 2px;
+}
+
+.todos::-webkit-scrollbar-thumb{
+  background: #55555d;
+  border: 2px solid lightgrey;
+  border-radius:2px;
+}
+
+.header{
+  text-align: center;
+  margin: 20px 0 70px 0;
+  color: #f5f5f5;
+  padding: 17px 0;
+  border-bottom: 2px dashed #fff;
+}
+
+.container{
+  margin: auto;
+  padding: 20px;
+  background: #f1f0f0;
+  border-radius: 6px;
+  max-width: 400px;
+  box-shadow: 2px 2px 12px rgba(0,0,0,0.3);
+}
+
+.container h1{
+  text-align: center;
+  margin: 7px 0;
+}
+
+.container .input_container{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container input{
+  padding: 12px;
+  width: 80%;
+  outline: none;
+  border: 2px solid #888;
+  border-radius: 30px;
+  font-size: 18px;
+}
+
+.container .add_btn{
+  position: absolute;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(to top right, #1e1d77, #5f5dd4);
+  border-radius: 50%;
+  font-size: 20px;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+.container .add_btn.active{
+  pointer-events: visible;
+  opacity: 1;
+}
+
+.container .todos{
+  margin: 12px 0;
+  padding: 10px 0;
+  user-select: none;
+  max-height: 250px;
+  overflow-y: auto;
+}
+
+.container .todos p{
+  position: relative;
+  padding: 12px;
+  background: #fff;
+  margin: 7px 0;
+  border-radius: 6px;
+  border-left: 3px solid #121090;
+  color: #444;
+  font-size: 17px;
+}
+
+.container .footer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container .footer .btn{
+  text-align: center;
+  padding: 10px;
+  border: none;
+  background: linear-gradient(to top right, #1e1d77, #5f5dd4);
+  border-radius: 6px;
+  font-size: 16px;
+  color: #fff;
+}
+
+.container .footer .unmark,
+.container .footer .clear_sele{
+  display: none;
+}
+
+.container .todos p span{
+  position: absolute;
+  height: 5px;
+  width: 5px;
+  background: #111;
+  right: 10px;
+  border-radius: 50%;
+}
+
+@media only screen and (max-width: 340px) {
+  .container input{
+    width: 70%;
+  }
+}

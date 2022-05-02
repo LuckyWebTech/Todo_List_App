@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo List App</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./css/all.min.css">
+  <link rel="stylesheet" href="./css/fontawesome.min.css">
+</head>
+<body>
+
+<h1 class="header">Plan Your Day..</h1>
+<div class="container">
+  <h1>What Todo!</h1>
+
+  <div class="todos_frame">
+    <div class="input_container">
+      <input type="text" id="todoInput" placeholder="Add Todo">
+      <button class="add_btn" id="addBtn"><i class="fas fa-plus"></i></button>
+    </div>
+    <div class="todos">
+      <!-- passing todos from javascript  -->
+    </div>
+
+    <div class="footer">
+      <div class="todos_count"></div>
+
+      <button class="btn unmark" id="unmark" title="Reselect">Reselect</button>
+      <button class="btn clear_sele" id="clearSelected" title="Delete Selected">Remove Selected</button>
+      <button class="btn clear_all" id="clearAll" title="Delete All">Clear All</button>
+
+    </div>
+  </div>
+</div>
+
+<!-- linking JavaScript  -->
+<script src="index.js"></script>
+</body>
+</html>
